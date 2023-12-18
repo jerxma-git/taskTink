@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import "./App.css"
+
+import Stories from 'react-insta-stories';
+
+import { stories } from './stories/stories';
+
+const App = () => {
+	return (
+    <div className="wrapper">
+      <Stories
+			stories={stories}
+			defaultInterval={1500}
+			width={432}
+			height={768}
+      loop={true}
+      />
     </div>
-  );
-}
+	);
+};
 
 export default App;
